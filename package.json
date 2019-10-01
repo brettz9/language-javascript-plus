@@ -11,6 +11,9 @@
 		"l": "npm run rm && npm run cp && atom --clear-window-state --dev ."
 	},
 	"author": "Alexander Elias",
+	"contributors": [
+		"Brett Zamir"
+	],
 	"license": "MPL-2.0",
 	"main": "index.js",
 	"directories": {
@@ -34,6 +37,6 @@
 	},
 	"homepage": "https://github.com/vokeio/language-javascript-plus#readme",
 	"dependencies": {
-		"tree-sitter-javascript": "^0.13.10"
+		"tree-sitter-javascript": "^0.15.1"
 	}
 }
