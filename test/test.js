@@ -6,5 +6,7 @@ var s = /*css*/`
 `;
 
 var h = /*html*/`
-	<div>hello world</div>
+	<div>hello <span>
+		there ${abc + 'abc'}world<span>
+	</div>
 `;

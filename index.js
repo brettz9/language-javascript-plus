@@ -1,7 +1,10 @@
+const ttlGrammar = require('./create-ttl-grammar');
 
 const languages = ['html', 'css'];
 
 exports.activate = function () {
+	this.ttlGrammar = new ttlGrammar(true);
+
 	for (const scopeName of ['source.js','source.ts','source.flow']) {
 
 		atom.grammars.addInjectionPoint(scopeName, { type: 'template_string',
@@ -42,4 +45,8 @@ exports.activate = function () {
 
 		});
 	}
+};
+
+exports.deactivate = function () {
+	this.ttlGrammar.destroy();
 };

@@ -6,9 +6,9 @@
 		"atom": "*"
 	},
 	"scripts": {
-		"rm": "rm -rf ~/.atom/dev/packages/language-javascript-plus",
-		"cp": "cp -r ../language-javascript-plus ~/.atom/dev/packages/.",
-		"l": "npm run rm && npm run cp && atom --clear-window-state --dev ."
+		"rm": "rm -rf ~/.atom/packages/language-javascript-plus",
+		"cp": "cp -r ../language-javascript-plus ~/.atom/packages/.",
+		"l": "npm run rm && npm run cp && atom --clear-window-state ."
 	},
 	"author": "Alexander Elias",
 	"contributors": [
@@ -37,6 +37,18 @@
 	},
 	"homepage": "https://github.com/vokeio/language-javascript-plus#readme",
 	"dependencies": {
+		"season": "^6.0.2",
 		"tree-sitter-javascript": "^0.15.1"
+	},
+	"configSchema": {
+		"taggedTemplateGrammar": {
+			"title": "JavaScript Tagged Template Literal Grammar Extensions",
+			"description": "Enter a list of comma-separated expressions in the form `tagname:scope.name.of.grammar` where `tagname` is your tagged template language name, expressed as a literal (with no commas) or an (Oniguruma) regex (with no capturing groups) and where the scope name can be found in Atom preferences -> Packages -> (the `language-*` package of interest) under \"Scope\"",
+			"type": "array",
+			"default": [],
+			"items": {
+				"type": "string"
+			}
+		}
 	}
 }

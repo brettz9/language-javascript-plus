@@ -5,7 +5,7 @@ Syntax highlighting for template strings in Atom
 `apm install language-javascript-plus`
 
 ## Usage
-Simply declare a template tag with a prefix multiline comment with HTML or CSS and you get syntax highlighting. 
+Simply declare a template tag with a prefix multiline comment with HTML or CSS and you get syntax highlighting.
 
 ## Triggers
 
@@ -13,9 +13,19 @@ Simply declare a template tag with a prefix multiline comment with HTML or CSS a
 	- `/*html*/`
 	- `/*css*/`
 
-## Example
-```javascript
-var template = /*html*/`
+- Tagged templates
+
+## Examples
+```js
+const template = /*html*/`
+	<div>will have syntax highlighting</div>
+`;
+```
+
+```js
+// Assumes an `html` tagged template function: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates
+
+const template = html`
 	<div>will have syntax highlighting</div>
 `;
 ```
